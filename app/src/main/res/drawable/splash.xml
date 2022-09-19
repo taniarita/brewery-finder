@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- drawable/splash.xml -->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="424dp"
+    android:height="912dp"
+    android:viewportWidth="424"
+    android:viewportHeight="912"
+    >
+
+    <group>
+
+        <clip-path
+            android:pathData="M40 12H384C399.464 12 412 24.536 412 40V872C412 887.464 399.464 900 384 900H40C24.536 900 12 887.464 12 872V40C12 24.536 24.536 12 40 12Z"
+            />
+
+        <group
+            android:translateX="1"
+            android:translateY="0"
+            android:pivotX="212"
+            android:pivotY="456"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:rotation="90"
+            >
+
+            <path
+                android:pathData="M12 12V900H412V12"
+                >
+
+                <aapt:attr name="android:fillColor">
+
+                    <gradient
+                        android:type="linear"
+                        android:startX="112"
+                        android:startY="456"
+                        android:endX="312"
+                        android:endY="456"
+                        >
+
+                        <item
+                            android:color="#333333"
+                            android:offset="0"
+                            />
+
+                        <item
+                            android:color="#000000"
+                            android:offset="1"
+                            />
+
+                    </gradient>
+
+                </aapt:attr>
+
+            </path>
+
+        </group>
+
+    </group>
+
+    <group>
+
+        <clip-path
+            android:pathData="M0 0V912H424V0M40 12H384C399.464 12 412 24.536 412 40V872C412 887.464 399.464 900 384 900H40C24.536 900 12 887.464 12 872V40C12 24.536 24.536 12 40 12Z"
+            />
+
+    </group>
+
+</vector>
+
