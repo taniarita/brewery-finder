@@ -12,16 +12,16 @@
 
     <group>
 
-        <clip-path
-            android:pathData="M40 12H384C399.464 12 412 24.536 412 40V872C412 887.464 399.464 900 384 900H40C24.536 900 12 887.464 12 872V40C12 24.536 24.536 12 40 12Z"
-            />
+<!--        <clip-path-->
+<!--            android:pathData="M40 12H384C399.464 12 412 24.536 412 40V872C412 887.464 399.464 900 384 900H40C24.536 900 12 887.464 12 872V40C12 24.536 24.536 12 40 12Z"-->
+<!--            />-->
 
         <group
             android:translateX="1"
             android:translateY="0"
             android:pivotX="212"
             android:pivotY="456"
-            android:scaleX="2"
+            android:scaleX="2.5"
             android:scaleY="2"
             android:rotation="90"
             >
@@ -62,9 +62,9 @@
 
     <group>
 
-        <clip-path
-            android:pathData="M0 0V912H424V0M40 12H384C399.464 12 412 24.536 412 40V872C412 887.464 399.464 900 384 900H40C24.536 900 12 887.464 12 872V40C12 24.536 24.536 12 40 12Z"
-            />
+<!--        <clip-path-->
+<!--            android:pathData="M0 0V912H424V0M40 12H384C399.464 12 412 24.536 412 40V872C412 887.464 399.464 900 384 900H40C24.536 900 12 887.464 12 872V40C12 24.536 24.536 12 40 12Z"-->
+<!--            />-->
 
     </group>
 

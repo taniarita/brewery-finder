@@ -4,17 +4,24 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.471" />
+        <entry key="app/src/main/res/drawable/auto_tint.xml" value="0.4885" />
+        <entry key="app/src/main/res/drawable/blur_evenly.xml" value="0.5335" />
+        <entry key="app/src/main/res/drawable/brewery_ico.xml" value="0.5365" />
         <entry key="app/src/main/res/drawable/brewery_icon.xml" value="0.3675" />
+        <entry key="app/src/main/res/drawable/content.xml" value="0.48" />
         <entry key="app/src/main/res/drawable/gradient.xml" value="0.3635" />
+        <entry key="app/src/main/res/drawable/navigation_.xml" value="0.382" />
         <entry key="app/src/main/res/drawable/splash.xml" value="0.5365" />
         <entry key="app/src/main/res/drawable/splash_background.xml" value="0.301" />
         <entry key="app/src/main/res/drawable/status_bar.xml" value="0.3675" />
         <entry key="app/src/main/res/drawable/vector.xml" value="0.1075" />
         <entry key="app/src/main/res/layout-v31/activity_main.xml" value="0.30625" />
         <entry key="app/src/main/res/layout-v31/splash.xml" value="0.4390625" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.3265625" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="app/src/main/res/layout/brewery_icon.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/layout/splash.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/splash_screen.xml" value="0.38177083333333334" />
         <entry key="app/src/main/res/layout/status_bar.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/layout/vector.xml" value="0.36666666666666664" />
       </map>
@@ -29,7 +36,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.5427083333333333" />
+        <option name="scale" value="0.33" />
       </ProjectState>
     </option>
   </component>
