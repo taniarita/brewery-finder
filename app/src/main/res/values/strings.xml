@@ -1,5 +1,23 @@
 <resources>
     <string name="app_name">brewery-finder</string>
+    <string name="app_label">brewery-finder</string>
     <string name="todo">TODO</string>
     <string name="title_activity_main">title_activity_main</string>
+
+    <string name="title">CIT Brewery</string>
+
+    <string name="bem_vindo_a">Bem-Vindo(a)!\nEncontre as melhores Cervejarias!</string>
+
+    <string name="use_minha_l">use minha localização</string>
+
+    <string name="search_hint">Busque por local</string>
+
+    <string name="as_10_mais_">As 10 mais bem avaliadas</string>
+
+    <string name="some_id">5,0</string>
+
+    <string name="description">Pub</string>
+
+    <string name="description_distance">0,9km</string>
+
 </resources>
