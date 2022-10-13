@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,6 +16,7 @@
 
         <!-- TOP APP BARS -->
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
             android:layout_height="112dp"
             android:background="@color/top_app_bar"
@@ -35,6 +35,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageButton
+                    android:id="@+id/imageButton"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:layout_marginTop="4dp"
@@ -48,55 +49,44 @@
 
                 </ImageButton>
 
-                <LinearLayout
-                    android:id="@+id/linearLayout2"
-                    android:layout_width="248dp"
-                    android:layout_height="64dp"
-                    android:layout_marginStart="56dp"
-                    android:layout_weight="4"
-                    app:layout_constraintStart_toStartOf="parent"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/title"
+                    android:textAppearance="@style/title"
+                    android:textFontWeight="400"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageButton"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="28dp"
-                        android:layout_marginTop="18dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/title"
-                        android:textAppearance="@style/title"
-                        android:textFontWeight="400">
+                </TextView>
 
-                    </TextView>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <ImageButton
+                    android:id="@+id/imageButtonLike"
+                    android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="2"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/icon_button_heart"
+                    app:backgroundTint="#00FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <ImageButton
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:contentDescription="@string/todo"
-                        android:src="@drawable/icon_button_star"
-                        app:backgroundTint="#00FFFFFF">
+                </ImageButton>
 
-                    </ImageButton>
+                <ImageButton
+                    android:id="@+id/imageButtonFavorite"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/icon_button_star"
+                    app:backgroundTint="#00FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButtonLike"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    <ImageButton
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:contentDescription="@string/todo"
-                        android:src="@drawable/icon_button_heart"
-                        app:backgroundTint="#00FFFFFF">
-
-                    </ImageButton>
-
-                </LinearLayout>
+                </ImageButton>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -131,12 +121,13 @@
 
             <!-- search bar-->
             <SearchView
-                android:id="@+id/search_bar"
+                android:id="@+id/searchBar"
                 android:layout_width="376dp"
                 android:layout_height="56dp"
                 android:layout_marginTop="77dp"
+                android:inputType="text"
                 android:background="@drawable/search_bar"
-                android:queryHint="@string/search_hint"
+                android:hint="@string/search_hint"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -144,36 +135,34 @@
             </SearchView>
 
             <!-- location-->
-            <LinearLayout
-                android:layout_width="201dp"
-                android:layout_height="24dp"
-                android:layout_marginTop="140dp"
+            <ImageButton
+                android:id="@+id/iconMap"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/my_location_24px"
+                app:backgroundTint="#00FFFFFF"
+                app:layout_constraintEnd_toStartOf="@+id/use_minha_l"
+                app:layout_constraintTop_toBottomOf="@+id/searchBar">
+
+            </ImageButton>
+
+            <TextView
+                android:id="@+id/use_minha_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="9dp"
+                android:gravity="center_vertical"
+                android:lineHeight="28.75px"
+                android:text="@string/use_minha_l"
+                android:textAppearance="@style/use_minha_l"
+                android:textFontWeight="300"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageButton
-                    android:id="@+id/icon_maps_m"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/my_location_24px"
-                    app:backgroundTint="#00FFFFFF">
-
-                </ImageButton>
-
-                <TextView
-                    android:id="@+id/use_minha_l"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:gravity="center_vertical"
-                    android:lineHeight="28.75px"
-                    android:text="@string/use_minha_l"
-                    android:textAppearance="@style/use_minha_l"
-                    android:textFontWeight="300" />
-
-            </LinearLayout>
+                app:layout_constraintTop_toBottomOf="@+id/searchBar" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -200,72 +189,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/brewery_card"
-                android:layout_width="140dp"
-                android:layout_height="234dp"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginStart="17dp"
-                android:layout_marginTop="20dp"
-                android:elevation="2dp"
-                app:cardCornerRadius="10dp"
+                android:layout_marginTop="32dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/as_10_mais_">
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/carousel_brewery" />
 
-                <ImageView
-                    android:layout_width="140dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/paddy_s_irish_pub_1" />
-
-                <TextView
-                    android:layout_width="83dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="128dp"
-                    android:lineHeight="24px"
-                    android:text="Cervejaria A"
-                    android:textAppearance="@style/title_card"
-                    android:textFontWeight="500" />
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="153dp"
-                    android:src="@drawable/star_24px" />
-
-                <TextView
-                    android:layout_width="83dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="153dp"
-                    android:lineHeight="14px"
-                    android:lineSpacingExtra="-2sp"
-                    android:text="@string/some_id"
-                    android:textAppearance="@style/some_id"
-                    android:textFontWeight="400" />
-
-                <TextView
-                    android:layout_width="83dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="182dp"
-                    android:lineSpacingExtra="-2sp"
-                    android:text="@string/description"
-                    android:textAppearance="@style/description" />
-
-                <TextView
-                    android:layout_width="83dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="208dp"
-                    android:lineSpacingExtra="-2sp"
-                    android:text="@string/description_distance"
-                    android:textAppearance="@style/description" />
-
-            </androidx.cardview.widget.CardView>
-
-
+            <ImageView
+                android:id="@+id/dot"
+                android:layout_width="132dp"
+                android:layout_height="6dp"
+                android:src="@drawable/dot"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

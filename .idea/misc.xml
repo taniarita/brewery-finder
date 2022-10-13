@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../../../layout/custom_preview.xml" value="0.40572916666666664" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.471" />
         <entry key="app/src/main/res/drawable/auto_tint.xml" value="0.4885" />
         <entry key="app/src/main/res/drawable/blur_evenly.xml" value="0.5335" />
@@ -21,8 +22,11 @@
         <entry key="app/src/main/res/layout-v31/splash.xml" value="0.4390625" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_no_search.xml" value="0.3802083333333333" />
         <entry key="app/src/main/res/layout/activity_searchable.xml" value="0.3890625" />
         <entry key="app/src/main/res/layout/brewery_icon.xml" value="0.36666666666666664" />
+        <entry key="app/src/main/res/layout/carousel_brewery.xml" value="0.3770833333333333" />
+        <entry key="app/src/main/res/layout/carousel_cervejaria.xml" value="0.3875" />
         <entry key="app/src/main/res/layout/splash.xml" value="0.25" />
         <entry key="app/src/main/res/layout/splash_screen.xml" value="0.38177083333333334" />
         <entry key="app/src/main/res/layout/status_bar.xml" value="0.36666666666666664" />
