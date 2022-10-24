@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".home.HomeActivity"
+            android:name=".home.view.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".search.NoSearchActivity"

@@ -1,4 +1,4 @@
-package com.example.breweryfinder.home
+package com.example.breweryfinder.home.model
 
 data class Brewery(
     val image: Int,
