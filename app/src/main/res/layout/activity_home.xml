@@ -125,9 +125,9 @@
                 android:layout_width="376dp"
                 android:layout_height="56dp"
                 android:layout_marginTop="77dp"
-                android:inputType="text"
                 android:background="@drawable/search_bar"
                 android:hint="@string/search_hint"
+                android:inputType="text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -189,15 +189,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_carousel"
+                android:name="com.example.breweryfinder.home.view.CarouselFragment"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="32dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:listitem="@layout/carousel_brewery" />
+                android:layout_height="match_parent" />
 
             <ImageView
                 android:id="@+id/dot"
@@ -209,6 +205,5 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

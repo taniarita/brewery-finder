@@ -8,5 +8,5 @@ import com.example.breweryfinder.home.repository.BreweryRepository
 
 class HomeViewModel(private val breweryRepository: BreweryRepository) : ViewModel() {
 
-    public var brewery: List<Brewery> = breweryRepository.getBrewery()
+    val brewery: List<Brewery> = breweryRepository.getBrewery()
 }
