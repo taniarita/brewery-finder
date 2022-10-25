@@ -18,7 +18,6 @@ class CarouselAdapter(
 
     //pega a view que a gente quer apresentar no recyclerView (carousel_brewery) e faz o binding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarouselViewHolder {
-//        val inflater = LayoutInflater.from(context)
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.carousel_brewery, parent, false)
         return CarouselViewHolder(view)
