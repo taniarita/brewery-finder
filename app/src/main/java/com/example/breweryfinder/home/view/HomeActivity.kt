@@ -4,10 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.SearchView
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.breweryfinder.R
-import com.example.breweryfinder.home.repository.BreweryRepository
 import com.example.breweryfinder.search.NoSearchActivity
 
 class HomeActivity : AppCompatActivity() {
@@ -16,7 +13,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val fragmentCarousel = CarouselFragment()
+        val fragmentCarousel = HomeFragment()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragment_carousel, fragmentCarousel)

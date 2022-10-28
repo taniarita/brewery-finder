@@ -6,13 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.breweryfinder.R
 import com.example.breweryfinder.home.model.Brewery
 
 
 class CarouselAdapter(
-    private val context: CarouselFragment,
+    private val context: Fragment,
     private val brewery: List<Brewery>
 ) : RecyclerView.Adapter<CarouselViewHolder>() {
 

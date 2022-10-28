@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.breweryfinder.R
 import com.example.breweryfinder.home.repository.BreweryRepository
 
-class CarouselFragment : Fragment(R.layout.fragment_carousel) {
+class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private val homeViewModel: HomeViewModel =
         HomeViewModel(breweryRepository = BreweryRepository())
@@ -19,7 +19,7 @@ class CarouselFragment : Fragment(R.layout.fragment_carousel) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val carouselView = inflater.inflate(R.layout.fragment_carousel, container, false)
+        val carouselView = inflater.inflate(R.layout.fragment_home, container, false)
         homeViewModel.brewery.listIterator()
 
         val recyclerView = carouselView.findViewById<RecyclerView>(R.id.recyclerView)
