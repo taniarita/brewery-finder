@@ -1,5 +1,6 @@
 package com.example.breweryfinder.home.model
 
+import com.example.breweryfinder.home.provider.remote.TopTenBreweryDTO
 import com.example.breweryfinder.home.provider.room.BreweryEntity
 import java.util.*
 
@@ -7,10 +8,8 @@ data class Brewery(
     val id : String,
     val image: Int,
     val name: String,
-    val icon: Int,
     val rate: Double,
     val description: String,
-    val distance: Double
 ) {
 
     fun toEntity(): BreweryEntity {
@@ -18,10 +17,16 @@ data class Brewery(
             id,
             image,
             name,
-            icon,
             rate,
             description,
-            distance,
         )
     }
+
+//    fun toClient(): TopTenBreweryDTO {
+//        return TopTenBreweryDTO(
+//            id,
+//            name,
+//            address2,
+//        )
+//    }
 }

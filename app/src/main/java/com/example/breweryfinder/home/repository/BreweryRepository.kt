@@ -3,10 +3,15 @@ package com.example.breweryfinder.home.repository
 import android.content.Context
 import com.example.breweryfinder.home.model.Brewery
 import com.example.breweryfinder.home.provider.HomeProvider
+import com.example.breweryfinder.home.provider.HomeRemoteProvider
 import com.example.breweryfinder.home.provider.room.AppDataBase
 import com.example.breweryfinder.home.provider.room.BreweryEntity
 
-class BreweryRepository(private val homeProvider: HomeProvider) {
+class BreweryRepository(
+    private val homeProvider: HomeProvider,
+    private val homeRemoteProvider: HomeRemoteProvider
+) {
+    //ROOM
     fun getBreweries(): List<Brewery> {
         return homeProvider.getBrewery()
     }
@@ -16,7 +21,6 @@ class BreweryRepository(private val homeProvider: HomeProvider) {
         breweryList.forEach { brewery ->
 
             breweryDao.insert(brewery)
-
         }
     }
 
@@ -25,7 +29,11 @@ class BreweryRepository(private val homeProvider: HomeProvider) {
         breweryList.forEach { brewery ->
 
             breweryDao.delete(brewery)
-
         }
+    }
+
+    //REMOTA
+    suspend fun getData() {
+        homeRemoteProvider.getBrewery()
     }
 }

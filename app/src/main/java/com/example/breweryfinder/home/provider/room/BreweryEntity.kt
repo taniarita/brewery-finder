@@ -13,20 +13,16 @@ data class BreweryEntity(
     @ColumnInfo(name = "id") val id: String,
     val image: Int,
     val name: String,
-    val icon: Int,
     val rate: Double,
     val description: String,
-    val distance: Double
 ) {
     fun toModel(breweryEntity: BreweryEntity): Brewery {
         return Brewery(
             breweryEntity.id,
             breweryEntity.image,
             breweryEntity.name,
-            breweryEntity.icon,
             breweryEntity.rate,
             breweryEntity.description,
-            breweryEntity.distance,
         )
     }
 }

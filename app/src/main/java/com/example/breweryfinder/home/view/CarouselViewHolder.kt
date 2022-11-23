@@ -14,13 +14,9 @@ class CarouselViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         image.setImageResource(brewery.image)
         val name = itemView.findViewById<TextView>(R.id.nameBrewery)
         name.text = brewery.name
-        val icon = itemView.findViewById<ImageView>(R.id.iconBrewery)
-        icon.setImageResource(brewery.icon)
         val rate = itemView.findViewById<TextView>(R.id.rateBrewery)
         rate.text = brewery.rate.toString()
         val description = itemView.findViewById<TextView>(R.id.descritpionBrewery)
         description.text = brewery.description
-        val distance = itemView.findViewById<TextView>(R.id.distanceBrewery)
-        distance.text = brewery.distance.toString()
     }
 }
