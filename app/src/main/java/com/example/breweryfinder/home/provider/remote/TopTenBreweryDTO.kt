@@ -1,5 +1,7 @@
 package com.example.breweryfinder.home.provider.remote
 
+import com.example.breweryfinder.home.model.Brewery
+import com.example.breweryfinder.home.provider.room.BreweryEntity
 import com.google.gson.annotations.SerializedName
 
 data class TopTenBreweryDTO(
@@ -38,3 +40,15 @@ data class TopTenBreweryDTO(
     @SerializedName("photos")
     val photos: Int
 )
+{
+    fun toModel(): Brewery {
+        return Brewery(
+            this.id ,
+            this.photos,
+            this.name,
+            this.average,
+            this.breweryType,
+        )
+    }
+}
+

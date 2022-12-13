@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.breweryfinder.R
 import com.example.breweryfinder.home.model.Brewery
-import com.example.breweryfinder.home.provider.room.BreweryEntity
 
 
 class CarouselAdapter(
@@ -14,7 +13,7 @@ class CarouselAdapter(
     brewery: List<Brewery>
 ) : RecyclerView.Adapter<CarouselViewHolder>() {
 
-    private val brewery = brewery.toMutableList()
+    private val breweryList = brewery.toMutableList()
 
     //pega a view que a gente quer apresentar no recyclerView (carousel_brewery) e faz o binding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarouselViewHolder {
@@ -25,13 +24,13 @@ class CarouselAdapter(
 
     //une a view à sua posição
     override fun onBindViewHolder(holder: CarouselViewHolder, position: Int) {
-        val beerHouse = brewery[position]
+        val beerHouse = breweryList[position]
         holder.binding(beerHouse)
     }
 
     //pega a posição da view
     override fun getItemCount(): Int {
-        return brewery.size
+        return breweryList.size
     }
 
 }

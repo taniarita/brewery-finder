@@ -1,7 +1,9 @@
 package com.example.breweryfinder.home.provider
 
+import android.content.Context
 import com.example.breweryfinder.R
 import com.example.breweryfinder.home.model.Brewery
+import com.example.breweryfinder.home.provider.room.AppDataBase
 
 class HomeRoomProvider(
 ) : HomeProvider {
@@ -78,5 +80,19 @@ class HomeRoomProvider(
                 description = "blablala",
             ),
         ).toMutableList()
+    }
+
+    override fun saveAll(breweryList: List<Brewery>, context: Context) {
+        val breweryDao = AppDataBase.getDatabase(context).getBreweryDao()
+        breweryList.forEach { brewery ->
+            breweryDao.insert(brewery.toEntity())
+        }
+    }
+
+    override fun deleteAll(breweryList: List<Brewery>, context: Context) {
+        val breweryDao = AppDataBase.getDatabase(context).getBreweryDao()
+        breweryList.forEach { brewery ->
+            breweryDao.delete(brewery.toEntity())
+        }
     }
 }
