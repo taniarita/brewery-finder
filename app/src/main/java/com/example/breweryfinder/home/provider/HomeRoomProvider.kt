@@ -4,10 +4,11 @@ import android.content.Context
 import com.example.breweryfinder.R
 import com.example.breweryfinder.home.model.Brewery
 import com.example.breweryfinder.home.provider.room.AppDataBase
+import retrofit2.Call
 
 class HomeRoomProvider(
 ) : HomeProvider {
-    override fun getBrewery(): List<Brewery> {
+    override fun getBrewery(breweryList: Call<List<Brewery>>) {
         return listOf(
             Brewery(
                 id = "01",

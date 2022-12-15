@@ -1,12 +1,13 @@
 package com.example.breweryfinder.home.provider.room
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
 interface BreweryDao {
 
     @Query("SELECT * FROM brewery_table")
-    fun getAll(): List<BreweryEntity>
+    fun getAll(): LiveData<List<BreweryEntity>>
 
     @Query("SELECT * FROM brewery_table WHERE id = :breweryId")
     fun getById(breweryId: String): List<BreweryEntity>

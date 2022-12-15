@@ -40,7 +40,7 @@ class HomeRemoteProvider(
 //
 //    }
 
-    override fun getBrewery() {
+    override fun getBrewery(breweryList: Call<List<Brewery>>) {
         CoroutineScope(Dispatchers.IO).launch {
             RetrofitInstance.breweryInstance.getCallBrewery().enqueue(object : Callback<List<TopTenBreweryDTO>> {
 
