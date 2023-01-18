@@ -5,18 +5,19 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.breweryfinder.R
-import com.example.breweryfinder.home.model.Brewery
+import com.example.breweryfinder.databinding.CarouselTopTenBreweryBinding
+import com.example.breweryfinder.home.model.TopTenBreweryModel
 
-class CarouselViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+class CarouselViewHolder(val binding: CarouselTopTenBreweryBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    fun binding(brewery: Brewery) {
-        val image = itemView.findViewById<ImageView>(R.id.imageBrewery)
-        image.setImageResource(brewery.image)
-        val name = itemView.findViewById<TextView>(R.id.nameBrewery)
-        name.text = brewery.name
-        val rate = itemView.findViewById<TextView>(R.id.rateBrewery)
-        rate.text = brewery.rate.toString()
-        val description = itemView.findViewById<TextView>(R.id.descritpionBrewery)
-        description.text = brewery.description
+    fun binding(topTenBreweryModel: TopTenBreweryModel) {
+        val image = binding.imageBrewery
+        image.setImageResource(topTenBreweryModel.photos)
+        val name = binding.nameBrewery
+        name.text = topTenBreweryModel.name
+        val rate = binding.rateBrewery
+        rate.text = topTenBreweryModel.average.toString()
+        val description = binding.descritpionBrewery
+        description.text = topTenBreweryModel.breweryType
     }
 }

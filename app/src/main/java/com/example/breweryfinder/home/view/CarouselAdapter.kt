@@ -4,22 +4,22 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.example.breweryfinder.R
-import com.example.breweryfinder.home.model.Brewery
+import com.example.breweryfinder.databinding.CarouselTopTenBreweryBinding
+import com.example.breweryfinder.home.model.TopTenBreweryModel
 
 
 class CarouselAdapter(
     private val context: Fragment,
-    brewery: List<Brewery>
+    topTenBreweryModel: Unit
 ) : RecyclerView.Adapter<CarouselViewHolder>() {
 
-    private val breweryList = brewery.toMutableList()
+    private val breweryList = mutableListOf<TopTenBreweryModel>()
 
     //pega a view que a gente quer apresentar no recyclerView (carousel_brewery) e faz o binding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarouselViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.carousel_top_ten_brewery, parent, false)
-        return CarouselViewHolder(view)
+        val topTenBreweryView =
+            CarouselTopTenBreweryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return CarouselViewHolder(topTenBreweryView)
     }
 
     //une a view à sua posição

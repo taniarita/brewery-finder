@@ -7,17 +7,17 @@ import androidx.room.*
 interface BreweryDao {
 
     @Query("SELECT * FROM brewery_table")
-    fun getAll(): LiveData<List<BreweryEntity>>
+    fun getAll(): LiveData<List<TopTenBreweryEntity>>
 
     @Query("SELECT * FROM brewery_table WHERE id = :breweryId")
-    fun getById(breweryId: String): List<BreweryEntity>
+    fun getById(breweryId: String): List<TopTenBreweryEntity>
 
     @Query("SELECT image FROM brewery_table WHERE id = :breweryId")
     fun getImageById(breweryId: String): Int
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(breweryEntity: BreweryEntity)
+    fun insert(topTenBreweryEntity: TopTenBreweryEntity)
 
     @Delete
-    fun delete(breweryEntity: BreweryEntity)
+    fun delete(topTenBreweryEntity: TopTenBreweryEntity)
 }

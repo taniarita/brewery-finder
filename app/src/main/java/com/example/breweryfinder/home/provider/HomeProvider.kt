@@ -1,14 +1,13 @@
 package com.example.breweryfinder.home.provider
 
-import android.content.Context
-import com.example.breweryfinder.home.model.Brewery
-import com.example.breweryfinder.home.provider.room.BreweryEntity
-import retrofit2.Call
+import androidx.lifecycle.MutableLiveData
+import com.example.breweryfinder.home.model.TopTenBreweryModel
+import com.example.breweryfinder.home.provider.remote.TopTenBreweryDTO
 
 interface HomeProvider {
-    fun getBrewery(breweryList: Call<List<Brewery>>)
+    fun getAllBrewery(breweryList: MutableLiveData<List<TopTenBreweryModel>>)
 
-    fun saveAll(breweryList: List<Brewery>, context: Context)
+    fun saveAllBrewery(): List<TopTenBreweryModel>
 
-    fun deleteAll(breweryList: List<Brewery>, context: Context)
+    fun deleteAllBrewery(): List<TopTenBreweryModel>
 }
