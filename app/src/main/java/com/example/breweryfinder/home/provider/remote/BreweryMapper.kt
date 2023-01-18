@@ -1,16 +1,16 @@
 package com.example.breweryfinder.home.provider.remote
 
-import com.example.breweryfinder.home.model.Brewery
+import com.example.breweryfinder.home.model.TopTenBreweryModel
 
 object BreweryMapper {
 
-    fun toModel(breweryDTO: TopTenBreweryDTO) : Brewery {
-        return Brewery(
+    fun toModel(breweryDTO: TopTenBreweryDTO) : TopTenBreweryModel {
+        return TopTenBreweryModel(
             id = breweryDTO.id,
-            image = breweryDTO.photos,
+            photos = breweryDTO.photos,
             name = breweryDTO.name,
-            rate = breweryDTO.average,
-            description = breweryDTO.breweryType,
+            average = breweryDTO.average,
+            breweryType = breweryDTO.breweryType,
         )
     }
 }

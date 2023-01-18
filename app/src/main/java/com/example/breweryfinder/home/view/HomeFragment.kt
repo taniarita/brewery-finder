@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.breweryfinder.R
+import com.example.breweryfinder.home.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -19,12 +20,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         savedInstanceState: Bundle?
     ): View? {
         val carouselView = inflater.inflate(R.layout.fragment_home, container, false)
-        homeViewModel.breweryList.listIterator()
+        homeViewModel.getBreweryList()
 
         homeViewModel.populateDataBase()
 
         val recyclerView = carouselView.findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.adapter = CarouselAdapter(this, brewery = homeViewModel.breweryList)
+        recyclerView.adapter =
+            CarouselAdapter(this, topTenBreweryModel = homeViewModel.getBreweryList())
         recyclerView.layoutManager =
             LinearLayoutManager(carouselView.context, LinearLayoutManager.HORIZONTAL, false)
         return carouselView

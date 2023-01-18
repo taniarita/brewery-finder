@@ -3,7 +3,6 @@ package com.example.breweryfinder.home.provider.remote
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-
 object RetrofitInstance {
     val breweryInstance: BreweryService by lazy {
         Retrofit.Builder()
