@@ -7,11 +7,10 @@ import com.example.breweryfinder.home.provider.remote.TopTenBreweryDTO
 internal class HomeRemoteProvider : HomeProvider {
 
 
-    override fun getAllBrewery(breweryList: MutableLiveData<List<TopTenBreweryModel>>) {
+    override fun getAllBrewery() {
         val breweryDTOList = listOf<TopTenBreweryDTO>()
         breweryDTOList.forEach { breweryDTOList ->
             breweryDTOList.toModel()
-
         }
     }
 

@@ -16,7 +16,8 @@ import retrofit2.Response
 
 class BreweryRepository(private val homeProvider: HomeProvider) {
 
-    suspend fun getBrewery(breweryList: MutableLiveData<List<TopTenBreweryModel>>) {
+    suspend fun getBrewery() {
+
         CoroutineScope(Dispatchers.IO).launch {
             RetrofitInstance.breweryInstance.getTopTenBrewery()
                 .enqueue(object : Callback<List<TopTenBreweryDTO>> {
@@ -26,7 +27,7 @@ class BreweryRepository(private val homeProvider: HomeProvider) {
                         response: Response<List<TopTenBreweryDTO>>
                     ) {
                         response.body()?.forEach {
-                            homeProvider.getAllBrewery(breweryList)
+                            homeProvider.getAllBrewery()
                         }
                     }
 

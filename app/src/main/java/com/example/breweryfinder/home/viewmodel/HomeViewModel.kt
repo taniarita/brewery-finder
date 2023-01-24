@@ -1,5 +1,8 @@
 package com.example.breweryfinder.home.viewmodel
 
+import android.app.Application
+import android.content.Context
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -8,27 +11,28 @@ import com.example.breweryfinder.home.repository.BreweryRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class HomeViewModel(private val breweryRepository: BreweryRepository) : ViewModel() {
+class HomeViewModel(application: Application, private val breweryRepository: BreweryRepository) :
+    AndroidViewModel(application) {
 
     private val topTenBreweryList = MutableLiveData<List<TopTenBreweryModel>>()
-//    private val topTenBreweryList: List<TopTenBreweryModel> = breweryRepository.getBrewery()
+
 
     fun getBreweryList() {
         viewModelScope.launch(Dispatchers.IO) {
-            breweryRepository.getBrewery(topTenBreweryList)
+            topTenBreweryList.value = breweryRepository.getBrewery()
         }
     }
 
 
     fun populateDataBase() {
         viewModelScope.launch(Dispatchers.IO) {
-            breweryRepository.saveAll()
+            topTenBreweryList.value = breweryRepository.saveAll()
         }
     }
 
     fun removeDataBase() {
         viewModelScope.launch(Dispatchers.IO) {
-            breweryRepository.deleteAll()
+            topTenBreweryList.value = breweryRepository.deleteAll()
         }
     }
 

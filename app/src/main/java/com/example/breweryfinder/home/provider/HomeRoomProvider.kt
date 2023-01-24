@@ -5,7 +5,7 @@ import com.example.breweryfinder.home.model.TopTenBreweryModel
 
 internal class HomeRoomProvider : HomeProvider {
 
-    override fun getAllBrewery(breweryList: MutableLiveData<List<TopTenBreweryModel>>) {
+    override fun getAllBrewery() {
         TODO("Not yet implemented")
     }
 

@@ -5,7 +5,7 @@ import com.example.breweryfinder.home.model.TopTenBreweryModel
 import com.example.breweryfinder.home.provider.remote.TopTenBreweryDTO
 
 interface HomeProvider {
-    fun getAllBrewery(breweryList: MutableLiveData<List<TopTenBreweryModel>>)
+    fun getAllBrewery()
 
     fun saveAllBrewery(): List<TopTenBreweryModel>
 
